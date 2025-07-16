@@ -26,17 +26,7 @@
                         </ul>
                     </g:hasErrors>
                     <g:form resource="${this.event}" method="POST">
-                        <fieldset class="form">
-                            <f:field bean="event" property="name"/>
-                            <f:field bean="event" property="location"/>
-                            <div class="fieldcontain">
-                              <label for="eventDate">Event Date</label>
-                              <g:datePicker name="eventDate" value="${new Date()}"/>
-                            </div>
-
-                            <f:field bean="event" property="description"/>
-                            <f:field bean="event" property="capacity"/>
-                        </fieldset>
+                        <g:render template="createEditForm"/>
                         <fieldset class="buttons">
                             <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                         </fieldset>
